@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('../images/forex-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Background and Login Container */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Improve Placeholder Visibility */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Light white text */
+    font-size: 14px;
+}
+
+/* Glassmorphism Effect */
+.login-container {
+    background: rgba(255, 255, 255, 0.1); /* Transparent White */
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Form Heading */
+.login-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Subtext */
+.login-container p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Input Fields */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+.login-container input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.login-container button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Remember Me Section */
+.remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.remember-me input {
+    width: 15px;
+    height: 15px;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Links */
+.login-container p a {
+    color: #4db8ff;
+    text-decoration: none;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Transitions */
+.login-container:hover {
+    transform: scale(1.02);
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px; /* Reduced padding for more space */
+    gap: 20px;
+    margin-top: 80px; /* Add margin to avoid overlap with header */
+    height: calc(100vh - 160px); /* Take up full height minus header and footer */
+    width: 100%; /* Ensure it takes full width */
+}
+
+/* LEFT SIDE - INSTRUMENTS TABLE */
+.instruments-section {
+    flex: 1.5;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.instruments-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.instruments-section th, .instruments-section td {
+    padding: 12px;
+    text-align: left;
+    color: #fff;
+}
+
+.instruments-section th {
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.instruments-section td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.instruments-section tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* RIGHT SIDE - OTHER SECTIONS */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    height: 100%; /* Take full height */
+}
+
+/* Market Movers & Most Traded Pairs side by side */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    height: 40%; /* Allocate 40% of the right side height */
+}
+
+.market-movers-section,
+.most-traded-section {
+    flex: 1; /* Equal width */
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Card Styling */
+/* Card Styling */
+.card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 100%; /* Take full height of parent */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push "See More" to the bottom */
+}
+
+/* Title Styling */
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Gainer and Loser Grid */
+.gainers-losers {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+}
+
+.gainer, .loser {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.gainer {
+    color: #4CAF50; /* Green for gainers */
+}
+
+.loser {
+    color: #FF5252; /* Red for losers */
+    border-right: none;
+}
+
+/* See More Button */
+.see-more {
+    margin-top: auto; /* Push to the bottom */
+    font-size: 14px;
+    color: #4db8ff;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Add some padding */
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+/* CHART SECTION */
+.forex-chart-section {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    height: 60%; /* Allocate 60% of the right side height */
+}
+
+.chart-image {
+    width: 100%;
+    height: 100%; /* Take full height of the chart section */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure the image fits well */
+}
+
+/* User Profile Styling */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.user-profile i {
+    font-size: 24px;
+}
+
+.logout-btn {
+    background: #FF5252;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #ff1a1a;
+    transform: scale(1.05);
+}
+
+/* MARKET PAGE STYLING */
+.market-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 50px; /* Avoids header overlap */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.market-container h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Gainers and Losers Buttons */
+.gainers-losers-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gainers-losers-buttons button {
+    background: rgba(76, 175, 80, 0.8); /* Semi-transparent green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.gainers-losers-buttons button:hover {
+    background: rgba(56, 142, 60, 0.8); /* Darker green on hover */
+}
+
+.gainers-losers-buttons .loser-btn {
+    background: rgba(255, 82, 82, 0.8); /* Semi-transparent red */
+}
+
+.gainers-losers-buttons .loser-btn:hover {
+    background: rgba(255, 26, 26, 0.8); /* Darker red on hover */
+}
+
+/* Market Table */
+.market-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.market-table th, .market-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.market-table th {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.market-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Pocket Trading Button */
+.pocket-trading-btn {
+    display: inline-block;
+    background: rgba(27, 94, 32, 0.8); /* Semi-transparent dark green */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.pocket-trading-btn:hover {
+    background: rgba(20, 90, 50, 0.8); /* Darker green on hover */
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4db8ff;
+}
