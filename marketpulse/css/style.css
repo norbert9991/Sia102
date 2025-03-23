@@ -182,7 +182,7 @@ footer {
     justify-content: space-between;
     padding: 50px; /* Reduced padding for more space */
     gap: 20px;
-    margin-top: 80px; /* Add margin to avoid overlap with header */
+    margin-top: 10px; /* Add margin to avoid overlap with header */
     height: calc(100vh - 160px); /* Take up full height minus header and footer */
     width: 100%; /* Ensure it takes full width */
 }
@@ -370,8 +370,8 @@ footer {
 /* MARKET PAGE STYLING */
 .market-container {
     width: 90%;
-    max-width: 1200px;
-    margin: 100px auto 50px; /* Avoids header overlap */
+    max-width: 1800px;
+    margin: 60px auto 50px; /* Avoids header overlap */
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
     backdrop-filter: blur(10px);
@@ -488,4 +488,948 @@ footer {
 
 .social-icons a:hover {
     color: #4db8ff;
+}
+
+
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: #fff; /* Light text color */
+    margin-top: 90px; /* Add margin to avoid overlap with header */
+    margin-bottom: 90px; /* Add margin to avoid overlap with footer */
+    width: 90%; /* Adjust width as needed */
+    max-width: 1800px; /* Optional: Set a max-width for better control */
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Top Section: 4 Boxes */
+.portfolio-top-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.portfolio-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: #fff; /* Light text color */
+    height: var(--box-height, 150px); /* Use CSS variable for height */
+    width: var(--box-width, auto); /* Use CSS variable for width */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Middle Section: 2 Charts */
+.portfolio-middle-boxes {
+    display: flex;
+    gap: 10px;
+}
+
+.portfolio-chart,
+.chart-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: #fff; /* Light text color */
+    height: var(--chart-height, 300px); /* Use CSS variable for height */
+    width: var(--chart-width, auto); /* Use CSS variable for width */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Bottom Section: 1 Big Box */
+.portfolio-bottom-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-big-box {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    color: #fff; /* Light text color */
+    height: var(--big-box-height, 400px); /* Use CSS variable for height */
+    width: var(--big-box-width, auto); /* Use CSS variable for width */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.portfolio-big-box table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff; /* Light text color */
+}
+
+.portfolio-big-box th,
+.portfolio-big-box td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    color: #fff; /* Light text color */
+}
+
+.portfolio-big-box th {
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Stronger border for headers */
+}
+
+/* User Management Container */
+/* User Management Container */
+.user-management-container {
+    margin-top: 80px; /* Avoid overlap with header */
+    margin-bottom: 60px; /* Avoid overlap with footer */
+    padding: 20px;
+    width: 90%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: calc(100vh - 160px); /* Take up full height minus header and footer */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Top Section: Input and Box */
+.user-management-top {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex: 1; /* Allow this section to grow and fill space */
+}
+
+.input-section {
+    flex: 2;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.input-section p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.input-section form {
+    display: flex;
+    gap: 10px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.input-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-section button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Info Box Styling */
+.info-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-box ul li {
+    margin-bottom: 10px;
+}
+
+.info-box ul li a {
+    color: #4db8ff;
+    text-decoration: none;
+}
+
+.info-box ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Total Users Styling */
+.total-users {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0;
+    color: #4db8ff; /* Highlight color */
+}
+
+/* Bottom Section: Big Box (Table) */
+.user-management-bottom {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 2; /* Allow this section to grow and fill space */
+    overflow-y: auto; /* Add scroll if content overflows */
+}
+
+.user-management-bottom h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.user-management-bottom table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-management-bottom th,
+.user-management-bottom td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-management-bottom th {
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-management-bottom tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.user-management-bottom th input[type="checkbox"],
+.user-management-bottom td input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Action Buttons Styling */
+.edit-btn,
+.delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #4db8ff;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #3a9edb;
+}
+
+.delete-btn {
+    background: #ff5252;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #e04141;
+}
+.user-management-bottom td:last-child {
+    text-align: center;
+}
+
+/* Trading Container */
+.trading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Adjust height to fit between header and footer */
+    padding: 20px;
+}
+
+/* Pocket Trade Title */
+.pocket-trade-title {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Trading Box */
+.trading-box {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.trading-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Simulation Instruction */
+.simulation-instruction {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Amount Display */
+.amount-display {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4db8ff;
+    margin-bottom: 20px;
+}
+
+/* Slider */
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    height: 8px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4db8ff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Start Trading Button */
+.start-trading-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-trading-btn:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Choose Container */
+.choose-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Adjust height to fit between header and footer */
+    padding: 20px;
+}
+
+/* Choose Title */
+.choose-title {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Simulation Amount */
+.simulation-amount {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+.simulation-amount span {
+    font-weight: bold;
+    color: #4db8ff;
+}
+
+/* Trading Options */
+.trading-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Trading Option Box */
+.trading-option {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trading-option:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.trading-option h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.trading-option p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+/* Short Term Container */
+.short-term-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 40px; /* Increased gap between left and right sections */
+    margin-top: 80px; /* Avoid overlap with header */
+    margin-bottom: 60px; /* Avoid overlap with footer */
+    height: calc(100vh - 160px); /* Full height minus header and footer */
+    width: 90%; /* Use 90% of the screen width */
+    max-width: 1800px; /* Optional: Set a max-width for better control */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Left Side: Forex Data and Charts */
+.forex-data {
+    flex: 2; /* Takes 2/3 of the available space */
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increased gap between elements */
+}
+
+.forex-value {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 20px;
+}
+
+.forex-value span {
+    margin-right: 10px;
+}
+
+.chart-container {
+    flex: 1;
+    width: 100%;
+    height: 400px; /* Increased height for the chart */
+}
+
+.open-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.open-orders th, .open-orders td {
+    padding: 15px; /* Increased padding for table cells */
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Right Side: Order Form */
+.order-form {
+    flex: 1; /* Takes 1/3 of the available space */
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-form h2 {
+    font-size: 24px; /* Increased font size */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* Increased margin for better spacing */
+    font-size: 16px; /* Increased font size */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px; /* Increased padding for better input fields */
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    font-size: 16px; /* Increased font size */
+}
+
+.order-form button {
+    width: 100%;
+    padding: 15px; /* Increased padding for better button size */
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-form button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Long Term Strategy Container */
+.long-term-period-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 160px); /* Full height minus header and footer */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pocket Trade Title */
+.pocket-trade-title h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Simulation Panel */
+.simulation-panel {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Simulation Period Selection */
+.simulation-period {
+    margin-bottom: 20px;
+}
+
+.simulation-period label {
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.simulation-period .simulation-description {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.simulation-period select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Simulation Amount Display */
+.simulation-amount {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.simulation-amount span {
+    font-weight: bold;
+    color: #4db8ff;
+}
+
+/* Start Simulation Button */
+.start-simulation button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-simulation button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Long Term Strategy Container */
+.long-term-strategy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 160px); /* Full height minus header and footer */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pocket Trade Title */
+.pocket-trade-title h1 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Simulation Amount Display */
+.simulation-amount-display {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.simulation-amount-display span {
+    font-weight: bold;
+    color: #4db8ff;
+}
+
+/* Simulation Panel */
+.simulation-panel {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+/* Select Strategies Section */
+.select-strategies h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.select-strategies p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.strategy-description {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Strategy Cards with Sliders */
+.strategy-cards {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+
+.strategy-card {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 0 0 auto;
+    width: 250px; /* Adjust card width as needed */
+    text-align: center;
+}
+
+.strategy-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.strategy-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+}
+
+.strategy-card .slider {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.strategy-card .allocated-funds {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Total Allocated Funds */
+.total-allocated-funds {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.total-allocated-funds span {
+    font-weight: bold;
+    color: #4db8ff;
+}
+
+/* Simulate Now Button */
+.simulate-now button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.simulate-now button:hover {
+    background: linear-gradient(135deg, #ff8e53, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Long Term Analysis Container */
+.long-term-analysis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Increased padding */
+    text-align: center;
+    gap: 5px; /* Increased gap between sections */
+}
+
+/* Analysis Title */
+.analysis-title h1 {
+    font-size: 42px; /* Increased font size */
+    color: #fff;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+/* Charts Section */
+.charts-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Increased gap between charts */
+    width: 100%;
+    max-width: 1800px;
+    margin-bottom: 40px; /* Increased margin */
+}
+
+/* Simulation Results Box */
+.simulation-results {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    text-align: left;
+}
+
+.simulation-results h2 {
+    font-size: 28px; /* Increased font size */
+    color: #fff;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.simulation-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.simulation-results td {
+    padding: 10px;
+    font-size: 16px; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.simulation-results td:last-child {
+    text-align: right;
+}
+
+/* Chart Container */
+.chart-container {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    text-align: center;
+}
+
+.chart-container h2 {
+    font-size: 28px; /* Increased font size */
+    color: #fff;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+/* Insights Section */
+.insights-section {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px; /* Increased padding */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.insights-section h2 {
+    font-size: 28px; /* Increased font size */
+    color: #fff;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.insights-section p {
+    font-size: 18px; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8; /* Increased line height */
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.insights-section ul {
+    list-style-type: disc;
+    margin-left: 40px; /* Increased margin */
+}
+
+.insights-section ul li {
+    font-size: 16px; /* Increased font size */
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px; /* Increased margin */
 }

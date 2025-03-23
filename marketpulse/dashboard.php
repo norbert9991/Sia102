@@ -24,7 +24,7 @@ if (!isset($_SESSION["username"])) {
             <li><a href="dashboard.php" class="active">Dashboard</a></li>
             <li><a href="market.php">Market</a></li>
             <li><a href="trading.php">Pocket Trading</a></li>
-            <li><a href="users.php">User Management</a></li>
+            <li><a href="usermanagement.php">User Management</a></li>
             <li><a href="portfolio.php">Portfolio</a></li>
         </ul>
     </nav>
